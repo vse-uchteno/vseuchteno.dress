@@ -34,7 +34,7 @@ if (isset($arCurrentValues['DRESS_IBLOCK_ID']) && ($arCurrentValues['DRESS_IBLOC
 	
 	$arIblockPropertiesFilter=array(
 		'IBLOCK_ID' => $arCurrentValues['DRESS_IBLOCK_ID'],
-		'PROPERTY_TYPE' => array('S'),
+		'=PROPERTY_TYPE' => \Bitrix\Iblock\PropertyTable::TYPE_STRING,
 	);
 	$arIblockPropertiesResult=PropertyTable::getList(array('filter' => $arIblockPropertiesFilter))->fetchAll();
 	foreach($arIblockPropertiesResult as $arIblockPropertiesItem) {
