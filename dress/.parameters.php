@@ -52,7 +52,7 @@ $arComponentParameters = array(
 			"NAME"=>GetMessage("VU_API_COLLECTION_URL"),
 			"TYPE"=>"STRING",
 			"MULTIPLE"=>"N",
-			"DEFAULT"=>"https://sebekon.ru/api/v2/collection/",
+			"DEFAULT"=>"https://sebekon.ru/api/v2/",
 			"COLS"=>25
 		),
 		"API_COLLECTION_CACHE_TTL"=>array(
@@ -62,6 +62,12 @@ $arComponentParameters = array(
 			"MULTIPLE"=>"N",
 			"DEFAULT"=>"21600",
 			"COLS"=>25
+		),
+                'API_COLLECTION_DEBUG' => array(
+			'PARENT' => 'BASE',
+			'NAME' => GetMessage('VU_API_COLLECTION_DEBUG'),
+			'TYPE' => 'CHECKBOX',
+			'DEFAULT' => 'Y',
 		),
 		"DRESS_IBLOCK_TYPE_ID" => array(
 			"PARENT" => "DATA_SOURCE",
