@@ -27,6 +27,11 @@ class CVseuchtenoDress extends CBitrixComponent
 	
 	public function executeComponent()
 	{
+         
+                global $USER;
+                if (!$USER->IsAdmin()) {
+                    return;
+                }
             
                 $this->propertyCode = $this->getPropertyCodeById($this->arParams['DRESS_IBLOCK_PROPERTY_COLLECTION_ID']);
             
